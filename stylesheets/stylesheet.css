@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: #151515 url("../images/tweed_@2X.png") 0 0;
+  background-repeat: repeat-y;
   color: #eaeaea;
   font: 16px;
   line-height: 1.5;
