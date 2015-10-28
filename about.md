@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Home
-permalink: /home/
+title: About
+permalink: /about/
 feature-img: "img/sample_feature_img_2.png"
 ---
 
