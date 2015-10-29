@@ -1,6 +1,6 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: Federico Lopez-Osorio
+description: Phylogenetics, evolution and social wasps
+meta_description: "Federico Lopez-Osorio"
 
 aboutPage: true
 
@@ -9,15 +9,15 @@ highlighter: pygments
 
 paginate: 20
 baseurl: /
-domain_name: 'http://yourblog-domain.com'
-google_analytics: 'UA-XXXXXXXX-X'
+domain_name: 'https://flopezo.github.io/'
+google_analytics: ''
 disqus: false
-disqus_shortname: 'your-disqus-shortname'
+disqus_shortname: ''
 
 # Details for the RSS feed generator
-url:            'http://your-blog-url.example.com'
-author:         'Your Name'
-authorTwitter:  'YourTwitterUsername'
+url:            'https://flopezo.github.io/'
+author:         'Federico Lopez-Osorio'
+authorTwitter:  'flopezos'
 
 permalink:       /:year/:title/
 
