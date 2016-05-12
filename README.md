@@ -1,123 +1,92 @@
-# Harmony
+# Minimal Mistakes Jekyll Theme
 
-Harmony is a responsive jekyll theme. 
+Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
 
-- Built for jekyll 2.x
-- Supports Google analytics and RSS feeds
-- Sass based styles
-- Browser support: IE 8+, Chrome, Safari and Firefox 
-- Fluidly responsive 
+[![Minimal Mistakes live preview][2]][1]
 
-## Contents
+[1]: https://mmistakes.github.io/minimal-mistakes/
+[2]: https://cloud.githubusercontent.com/assets/1376749/14562643/d83b96c0-02eb-11e6-98d6-473fbfd3bff6.jpg (live preview)
 
-- [Harmony](#harmony)
-- [About Jekyll](#about-jekyll)
-- [How to install/run](#how-to-installrun)
-- [Options/Usage](#optionsusage)
-  - [Header navigation links](#header-navigation-links)
-  - [Footer links](#footer-links)
-  - [Copyrights/Disclaimer statements](#copyrightsdisclaimer-statements)
-- [Screenshots](#screenshots)
-- [Feedback/Bugs/Suggestions](#feedbackbugssuggestions)
-- [Version history](#version-history)
-- [License](#license)
+The theme includes responsive layouts (`single`, `archive`, and `splash` pages) that look great on mobile and desktop browsers.
 
-## About jekyll 
+![layout examples](https://cloud.githubusercontent.com/assets/1376749/14541626/dac474f4-0258-11e6-83f6-40e752028222.png)
 
-[Jekyll](http://jekyllrb.com/) is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes.
+## [Installation and Setup](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) / [Preview the Theme](https://mmistakes.github.io/minimal-mistakes/)
 
-## How to install/run
+### Notable Features
 
-1. [Fork](https://github.com/web-create/harmony/fork) this repository.
-2. Clone it: git clone https://github.com/YOUR-USERNAME/harmony.
-3. If you're completely new to jekyll, please read more about [Jekyll](http://jekyllrb.com/) and [Github pages](https://help.github.com/articles/using-jekyll-with-pages).
-4. Change your directory into cloned repository. 
-5. Run `bundle install`
-6. Edit the _config.yml on root directory. Change `url` property to to 
-`http://127.0.0.1:4000` since you are going to run on localhost.
-7. Run the jekyll server by having: `jekyll serve --baseurl ''` or `rake preview`   
+- Compatible with Jekyll 3.x and GitHub Pages
+- Several layout options (single, archive, splash pages)
+- SEO optimized with support for [Twitter Cards](https://dev.twitter.com/cards/overview) and [Open Graph](http://ogp.me/) data
+- Optional header images, sidebars, table of contents, galleries, related posts, breadcrumb links, and more.
+- Optional comments ([Disqus](https://disqus.com/), [Facebook](https://developers.facebook.com/docs/plugins/comments), Google+, and custom)
+- Optional analytics ([Google Analytics](https://www.google.com/analytics/) and custom)
 
-Point your browser to [http://localhost:4000](http://localhost:4000).
+#### Demo Pages
 
-Note: If you are a windows user please refer to this nice website - http://jekyll-windows.juthilo.com/ by Julian Thilo to configure ruby + jekyll on windows.
+| Name                                        | Description                                           |
+| ------------------------------------------- | ----------------------------------------------------- |
+| [Post with Header Image][header-image-post] | A post with a large header image. |
+| [HTML Tags and Formatting Post][html-tags-post] | A variety of common markup showing how the theme styles them. |
+| [Syntax Highlighting Post][syntax-post] | Post displaying highlighted code. |
+| [Post with a Gallery][gallery-post] | A post showing several images wrapped in `<figure>` elements. |
+| [Sample Collection Page][sample-collection] | Single page from a collection. |
+| [Categories Archive][categories-archive] | Posts grouped by category. |
+| [Tags Archive][tags-archive] | Posts grouped by tags. |
 
-## Options/Usage
+For even more demo pages check the [posts archive][year-archive].
 
-Harmony has some customizable options. All the configuration details are 
-configured in `_config.yml` file under root of the harmony directory. 
+[header-image-post]: https://mmistakes.github.io/minimal-mistakes/layout-header-image-text-readability/
+[gallery-post]: https://mmistakes.github.io/minimal-mistakes/post%20formats/post-gallery/
+[html-tags-post]: https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/
+[syntax-post]: https://mmistakes.github.io/minimal-mistakes/markup-syntax-highlighting/
+[sample-collection]: https://mmistakes.github.io/minimal-mistakes/recipes/chocolate-chip-cookies/
+[categories-archive]: https://mmistakes.github.io/minimal-mistakes/categories/
+[tags-archive]: https://mmistakes.github.io/minimal-mistakes/tags/
+[year-archive]: https://mmistakes.github.io/minimal-mistakes/year-archive/
 
-Feel free to change your `name`, `descriptionn`, `meta_description`, `author details`,
-`social media names` and `Google analytics id` accordingly. 
+---
 
-``` yml
-# Harmony theme configuration. Please change accordingly.
-harmony:
-  name: Harmony
-  # Little description about your site
-  description: Harmony is free responsive jekyll theme.
-  meta_description: Harmony is free responsive jekyll theme. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-  basetheme: theme-base-01 # pre defined the{{ site.url | prepend: site.baseurl }}mes are darken, blue-water, reddish.
-  author: # Author details
-    name: Gayan Virajith
-    email: gayanvirajith@gmail.com
-    url: http://gayanvirajith.github.io
+### Credits
 
-  # Google Analytics key, leave blank to ignore
-  google_analytics_key: UA-xxxx-x
+#### Icons + Demo Images:
 
-  # Profile links, leave blank to ignore
-  social: 
-    github: gayanvirajith
-    twitter: gayanvirajith
-    facebook: gayanvirajith
-    gplus: +GayanVirajith
-    dribble: gayan
-    pinterest: 
-  # Toggle disclaimer in footer
-  show_disclaimer: true
-```
+- [The Noun Project](https://thenounproject.com) -- Garrett Knoll, Arthur Shlain, and [tracy tam](https://thenounproject.com/tracytam)
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+- [Unsplash](https://unsplash.com/)
 
-### Includes 
+#### Other:
 
-All the partial includes are under `_includes` directory.
+- [Jekyll](http://jekyllrb.com/)
+- [jQuery](http://jquery.com/)
+- [Susy](http://susy.oddbird.net/)
+- [Breakpoint](http://breakpoint-sass.com/)
+- [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
+- [FitVids.JS](http://fitvidsjs.com/)
+- Greedy Navigation - [lukejacksonn](http://codepen.io/lukejacksonn/pen/PwmwWV)
+- [jQuery Smooth Scroll](https://github.com/kswedberg/jquery-smooth-scroll)
+- [Stickyfill](https://github.com/wilddeer/stickyfill)
 
-#### Header navigation links
+---
 
-Feel free to add/edit links for your header in the file `header-links.html`.
+The MIT License (MIT)
 
-#### Footer links
+Copyright (c) 2016 Michael Rose
 
-Customize your footer links by editing `_includes/footer-links.html`
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-#### Copyrights/Disclaimer statements
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-All copyright notes are under `_includes/footer.html`. Also note that you 
-can toggle on/off copyright notes from the front-end by setting up `show_disclaimer` 
-property in `_config.yml`. 
-
-### Screenshots
-![Home page screenshot](https://raw.githubusercontent.com/web-create/harmony/master/assets/css/images/harmony-web.jpg "Desktop screen")
-
-![Post page screenshot](https://raw.githubusercontent.com/web-create/harmony/master/assets/css/images/harmony-web-2.jpg "Post page screen-shot")
-
-![Blog archive page screenshot](https://raw.githubusercontent.com/web-create/harmony/master/assets/css/images/harmony-web-3.jpg "Blog archive page screen-shot")
-
-#### Feedback/Bugs/Suggestions 
-
-Please submit as an [issue](https://github.com/web-create/harmony/issues/new),
-I am happy to response back.
-
-Version history
----------------
-
-| Version no. | Description  | Date |
-| --- | --- | --- |
-| 1.0 | Initial release | 9th September 2014 |
-| 1.0.1 | v1.0.1 with minor bug fix | 9th September 2014 |
-| 1.0.2 | v1.0.2 Optimize for Google | 24th October 2014 |
-
-
-## License
-
-Free / Open sourced under the 
-[MIT](https://github.com/web-create/harmony/blob/master/LICENSE.md).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
