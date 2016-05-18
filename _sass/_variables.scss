@@ -1,46 +1,76 @@
-// TYPOGRAPHY ================================================
-$base-font: 'source-sans-pro', sans-serif;
-$heading-font: $base-font;
-$caption-font: $base-font;
-$code-font: 'source-code-pro', monospace;
-$alt-font: 'volkhov', serif;
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
 
-$doc-font-size: 16;
-$doc-line-height: 24;
+/* Colors
+   ========================================================================== */
 
-$border-radius: 3px;
+/* Don't use black */
 
+$black:  #3b3b3b;
+$white: #f9f9f9;
 
-// set-up the body font-size / line-height
-body {
-  margin-top: 0px + $doc-line-height;
-  font-size: 0px + $doc-font-size;  
-}
+/* Gray scale */
 
+$grey-dark:   #222;
+$grey-medium: #999;
+$grey-light:  #d9d9d9;
 
-// COLORS =====================================================
-$body-color         : #fff;
-$text-color         : #222;
-$base-color         : #343434;    
-$comp-color         : spin($base-color, 180); 
-$border-color       : #ddd;
-$white              : #fff;
-$black              : #000;
-$accent-color       : $black;
-$link-color         : #222;
+/* Hilight */
+$hilite: #fffbd7;
 
-$table-border-color           : $border-color;
-$table-border                 : 1px solid $table-border-color;
-$table-background             : $body-color;
-$table-header-color           : lighten($table-background, 10);
-$table-hover-color            : darken($table-background, 2);
-$table-stripe-color           : darken($table-background, 4);
-$table-stripe-color-hover     : darken($table-stripe-color, 5);
+/* Accent Colors */
+$link: #8AB9D1;
+$accent: #24536B;
 
 
-// MEDIA QUERIES ==============================================
-$micro            : "only screen and (min-width: 30em)";
-$small            : "only screen and (min-width: 37.5em)";
-$medium           : "only screen and (min-width: 48em)";
-$large            : "only screen and (min-width: 62em)";
-$x-large          : "only screen and (min-width: 86.375em)";
+/* Typography
+   ========================================================================== */
+
+$sans: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+$serif: "Calendas Plus","Crimson Text", "Hoefler Text", "Georgia", serif;
+
+   
+   
+/* Type Scale
+   ========================================================================== */
+
+/** * 12 & 16 as roots then powers of two. */
+
+$fs1:64px;
+$fs2:48px;
+$fs3:32px;
+$fs4:24px;
+
+$fsp:22px;
+
+$fs5:16px;
+$fs6:12px;
+
+// Line Height
+
+$lh: 33px;
+$lhsmall: 24px;
+
+// Sizing 
+$footerHeight: 320px;
+
+// Griddit
+
+
+
+/* Break Points
+   ========================================================================== */
+   
+/* Mobile */
+$breakpoint-1-max-width:480px;
+
+/* Tablet */
+$breakpoint-2-max-width:800px;
+$breakpoint-3-max-width:1200px;
+
+/* Style Tidbits
+   ========================================================================== */
+
+$borderR: 4px;
+

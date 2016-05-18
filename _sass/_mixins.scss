@@ -1,197 +1,184 @@
-// UTILITY MIXINS
-// --------------------------------------------------
-
-// Webkit-style focus
-// --------------------
-@mixin tab-focus() {
-  // Default
-  outline: thin dotted #333;
-  // Webkit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-// Center-align a block level element
-// ----------------------------------
-@mixin center-block() {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@mixin text-overflow() {
-overflow: hidden;
-text-overflow: ellipsis;
-white-space: nowrap; }
-
-// MIXINS
-// --------------------------------------------------
-
-%tab-focus {
-  // Default
-  outline: thin dotted #333;
-  // Webkit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+// Underline
+@mixin underline($width: 2px, $style: solid, $border-color: $link) {
+  border-bottom: 2px solid $border-color; 
 }
 
 
-//  Typography
-// --------------------------------------------------
-
-/*  Vertical Rhythm
-  https://github.com/sturobson/Sassifaction
-
-  In this mixin you can specify the font size in PX and 
-  it will calculate the REM based on your $doc-font-size 
-  & $doc-line-height variables. 
-
-    @include font-size(24);
-
-  It will also create a bottom margin based on the 
-  $doc-font-size & $doc-line-height variables unless you 
-  specify that it shouldn't have one.
-
-    @include font-size(24, no);
-
-  Or if you want to specify a different bottom margin to 
-  be generated.
-
-    @include font-size(24,32);
-
-  This mixin also generates a pixel-less line height by 
-  default unless you specify that you either don't want 
-  one where I'd suggest declaring 1 within the mixin.
-
-    @include font-size(24, yes, 1);
-
-  There's also the option to specify a different line-height 
-  for it to generate to, where you would specify the 
-  line-height in (effectively) it's pixel value.
-
-    @include font-size(24, yes, 40);
-*/
-
-@mixin font-size($size, $margin: yes, $line-height: $doc-line-height) {
-    
-  // generates the font-size in REMs with a PX fallback
-  font-size: 0px + $size;
-  font-size: 0rem + $size / $doc-font-size;
-
-  // line-height functions
-  ////////////////////////
-
-  // if you a line-height is specified in the mixin
-  @if $line-height != $doc-line-height and $line-height != 1 {
-    line-height: ceil($size / $line-height) * ($line-height / $size);
-  }
-  
-  // if $line-height == 1
-  // because, typing 1 is quicker than 16
-  @else if $line-height == 1 {
-    line-height: 1;
-  }
-
-  // normal $line-height
-  // if the line-height is left.
-  @else {
-    line-height: ceil($size / $doc-line-height) * ($doc-line-height / $size);
-  }
-
-  // margin-bottom functions
-  //////////////////////////
-
-  // if no is bottom margin is required
-  @if $margin == no {
-    margin-bottom: 0;  
-  }  
-  
-  // if a specific bottom margin is required
-  @else if $margin != yes and $margin != no {
-    margin-bottom: 0px + $margin;
-    margin-bottom: 0rem + ($margin / $doc-font-size);  
-  }
-
-  // if you're keeping the vertical rhythm with the margin
-  @else {
-    margin-bottom: 0px + $doc-line-height;
-    margin-bottom: 0rem + ($doc-line-height / $doc-font-size);  
-  }
+// Clearfix
+@mixin clearfix {
+ // For modern browsers
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }  &:after {
+    clear:both;
+  }  // For IE 6/7 (trigger hasLayout)
+  & {
+    zoom:1;
+    }
 }
 
-// ROUND CORNERS
-// --------------------------------------------------
 
-// @include rounded(VALUE);
-@mixin rounded($radius:4px) {
-border-radius : $radius; }
-
-// @include border-radius(VALUE,VALUE,VALUE,VALUE);
-@mixin border-radius($topright: 0, $bottomright: 0, $bottomleft: 0, $topleft: 0) {
-border-top-right-radius : $topright;
-border-bottom-right-radius : $bottomright;
-border-bottom-left-radius : $bottomleft;
-border-top-left-radius : $topleft;
-background-clip : padding-box; }
-
-// @include box-shadow(HORIZONTAL VERTICAL BLUR COLOR))
-@mixin box-shadow($shadow: 0 1px 3px rgba(0,0,0,.25)) {
--webkit-box-shadow : $shadow;
--moz-box-shadow : $shadow;
-box-shadow : $shadow; }
-
-// @include drop-shadow(HORIZONTAL, VERTICAL, BLUR, ALPHA);
-@mixin drop-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $alpha: 0.1) {
--webkit-box-shadow : $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
--moz-box-shadow : $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
-box-shadow : $x-axis $y-axis $blur rgba(0, 0, 0, $alpha); }
-
-// @include text-shadow();
-@mixin text-shadow($shadow: 0 2px 3px rgba(0,0,0,.25)) {
-text-shadow : $shadow; }
-
-// @include opacity(VALUE);
-@mixin opacity($opacity : .5) {
-opacity : $opacity; }
-
-// For image replacement
-@mixin hide-text() {
-text-indent : 100%;
-white-space : nowrap;
-overflow : hidden; }
-
-// Hide from visual and speaking browsers
-@mixin hidden() {
-display : none !important; 
-visibility : hidden; }
-.hidden {
-  display: none;
-  visibility: hidden;
+// BACKGROUND GRADIENT 
+@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
+    background-color: $startColor;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+    background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+    background-image:    -moz-linear-gradient(top, $startColor, $endColor);
+    background-image:     -ms-linear-gradient(top, $startColor, $endColor);
+    background-image:      -o-linear-gradient(top, $startColor, $endColor);
+    background-image:         linear-gradient(top, $startColor, $endColor);
+    filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr=$startColor, EndColorStr=$endColor);
 }
 
-// Hide but maintain layout
-@mixin invisible() { 
-visibility : hidden; }
 
-// @include resize(VALUE) (none, both, horizontal, vertical, inherit)
-@mixin resize($direction: both) {
-resize : $direction;
-overflow : auto; }
+// BACKGROUND SIZE
+@mixin background-size($width: 100%, $height: 100%) {
+     -moz-background-size: $width $height;
+  -webkit-background-size: $width $height;
+          background-size: $width $height;
+}
 
-// @include userselect(VALUE) (all, element, none, text)
-@mixin user-select($select) {
--webkit-user-select : $select;
--moz-user-select : $select;
--o-user-select : $select;
-user-select : $select; }
 
-// Hidden but available to speaking browsers
-@mixin visuallyhidden() { 
-overflow : hidden; 
-position : absolute;
-clip : rect(0 0 0 0); 
-height : 1px; 
-width : 1px;
-margin : -1px; 
-padding : 0; 
-border : 0; }
+// BORDER RADIUS
+@mixin br($radius: 5px) {
+    -moz-border-radius:    $radius;
+    -webkit-border-radius: $radius;
+    border-radius:         $radius;
+}
+
+@mixin border-radius-separate($topLeftRadius: 5px, $topRightRadius: 5px, $bottomLeftRadius: 5px, $bottomRightRadius: 5px) {
+    -webkit-border-top-left-radius:     $topLeftRadius;
+    -webkit-border-top-right-radius:    $topRightRadius;
+    -webkit-border-bottom-right-radius: $bottomLeftRadius;
+    -webkit-border-bottom-left-radius:  $bottomRightRadius;
+
+    -moz-border-radius-topleft:     $topLeftRadius;
+    -moz-border-radius-topright:    $topRightRadius;
+    -moz-border-radius-bottomright: $bottomLeftRadius;
+    -moz-border-radius-bottomleft:  $bottomRightRadius;
+
+    border-top-left-radius:     $topLeftRadius;
+    border-top-right-radius:    $topRightRadius;
+    border-bottom-right-radius: $bottomLeftRadius;
+    border-bottom-left-radius:  $bottomRightRadius;
+}
+
+/* BOX */
+@mixin box($orient: horizontal, $pack: center, $align: center) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+
+    -webkit-box-orient: $orient;
+    -moz-box-orient:    $orient;
+    box-orient:         $orient;
+
+    -webkit-box-pack: $pack;
+    -moz-box-pack:    $pack;
+    box-pack:         $pack;
+
+    -webkit-box-align: $align;
+    -moz-box-align:    $align;
+    box-align:         $align;
+}
+
+/* BOX RGBA */
+@mixin box-rgba($r: 60, $g: 3, $b: 12, $opacity: 0.23, $color: #3C3C3C) {
+  background-color: transparent;
+  background-color: rgba($r, $g, $b, $opacity);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr#$color,endColorstr=$color);
+            zoom:   1;
+}
+
+
+/* BOX SHADOW */
+@mixin bxshd($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+    -webkit-box-shadow: $inset $x $y $blur $color;
+    -moz-box-shadow:    $inset $x $y $blur $color;
+    box-shadow:         $inset $x $y $blur $color;
+}
+
+/* BOX SIZING */
+@mixin box-sizing($type: border-box) {
+    -webkit-box-sizing:   $type;
+    -moz-box-sizing:      $type;
+    box-sizing:           $type;
+}
+
+/* COLUMNS */
+@mixin columns($count: 3, $gap: 10) {
+    -webkit-column-count: $count;
+    -moz-column-count:    $count;
+    column-count:         $count;
+
+    -webkit-column-gap:   $gap;
+    -moz-column-gap:      $gap;
+    column-gap:           $gap;
+}
+
+/* DOUBLE BORDERS */
+@mixin double-borders($colorOne: #3C3C3C, $colorTwo: #999999, $radius: 0) {
+    border: 1px solid $colorOne;
+
+    -webkit-box-shadow: 0 0 0 1px $colorTwo;
+    -moz-box-shadow:    0 0 0 1px $colorTwo;
+    box-shadow:         0 0 0 1px $colorTwo;
+
+    @include border-radius( $radius );
+}
+
+/* FLEX */
+@mixin flex($value: 1) {
+    -webkit-box-flex: $value;
+    -moz-box-flex:    $value;
+    box-flex:         $value;
+}
+
+/* FLIP */
+@mixin flip($scaleX: -1) {
+	-moz-transform:    scaleX($scaleX);
+	-o-transform:      scaleX($scaleX);
+	-webkit-transform: scaleX($scaleX);
+	transform:         scaleX($scaleX);
+	filter:            FlipH;
+	-ms-filter:        "FlipH";
+}
+
+/* OPACITY */
+@mixin opacity($opacity: 0.5) {
+    filter:         alpha(opacity=($opacity * 100));
+    -ms-filter:     "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + ($opacity * 100) + ")";
+    -moz-opacity:   $opacity;
+    -khtml-opacity: $opacity;
+    opacity:        $opacity;
+}
+
+/* ROTATE*/
+@mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0) {
+     -moz-transform: rotate($deg + deg);
+       -o-transform: rotate($deg + deg);
+  -webkit-transform: rotate($deg + deg);
+      -ms-transform: rotate($deg + deg);
+          transform: rotate($deg + deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(
+                     M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand');
+               zoom: 1;
+}
+
+/* TEXT SHADOW */
+@mixin tshd($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+
+/* TRANSITION */
+@mixin transit($what: all, $length: 1s, $easing: ease-in-out) {
+    -moz-transition:    $what $length $easing;
+    -o-transition:      $what $length $easing;
+    -webkit-transition: $what $length $easing;
+    -ms-transition:     $what $length $easing;
+    transition:         $what $length $easing;
+
+}
