@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-<div class="wrapper style1">
-    <article class="container">
+<section>
+    <div class="container">
         <header class="major">
-            <h2 class="post-title">{{ page.title }}</h2>
+            <h2>{{ page.title }}</h2>
                 <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
         </header>
 
@@ -19,6 +19,6 @@ layout: default
             <a href="{{ page.next.url }}" class="float-right">Next post &rarr;</a> {% endif %}
         </footer>
 
-    </article>
+    </div>
 
-</div>
+</section>

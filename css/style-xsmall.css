@@ -1,7 +1,7 @@
 /*
-	Ion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	Read Only by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 /* Basic */
@@ -17,12 +17,12 @@
 /* List */
 
 	ul.actions {
-		margin: 0 0 2em 0;
+		margin: 0 0 2.25em 0;
 	}
 
 		ul.actions li {
-			padding: 1em 0 0 0;
 			display: block;
+			padding: 1.125em 0 0 0;
 			text-align: center;
 			width: 100%;
 		}
@@ -41,12 +41,17 @@
 				}
 
 		ul.actions.small li {
-			padding: 0.5em 0 0 0;
+			padding: 0.5625em 0 0 0;
 		}
 
 			ul.actions.small li:first-child {
 				padding-top: 0;
 			}
+
+	ul.feature-icons li {
+		display: block;
+		width: 100%;
+	}
 
 /* Button */
 
@@ -55,10 +60,4 @@
 	input[type="button"],
 	.button {
 		padding: 0;
-	}
-
-/* Banner */
-
-	#banner {
-		padding: 5em 2em 4em 2em;
 	}

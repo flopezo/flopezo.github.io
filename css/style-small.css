@@ -1,7 +1,7 @@
 /*
-	Ion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	Read Only by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 /* Basic */
@@ -10,76 +10,121 @@
 		font-size: 12pt;
 	}
 
+	h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+		display: none;
+	}
+
 	h2 {
-		font-size: 1.35em;
-		line-height: 1.5em;
+		font-size: 1.75em;
 	}
 
 	h3 {
-		font-size: 1.2em;
-		line-height: 1.5em;
+		font-size: 1.5em;
 	}
 
 	h4 {
 		font-size: 1em;
-		line-height: 1.5em;
+	}
+
+/* Image */
+
+	.image.left {
+		margin: 0 1.5em 1em 0;
+	}
+
+	.image.right {
+		margin: 0 0 1em 1.5em;
 	}
 
 /* Section/Article */
 
-	header.major {
-		width: 90%;
-		margin: 0 auto;
+	header br {
+		display: none;
 	}
 
-		header.major h2 {
+	header.major h2 {
+		font-size: 2.5em;
+	}
+
+		header.major h2 + p {
 			font-size: 1.5em;
 		}
 
-		header.major h2 + p {
-			font-size: 1.25em;
-			margin: -0.5em 0 2em 0;
-		}
+/* Features */
 
-/* Wrapper */
-
-	.wrapper {
-		padding: 3em 0 1em 0;
+	.features article .image, .excerpt img {
+		display: block;
+		margin: 0 0 2.25em 0;
+		padding-right: 0;
+		width: 100%;
 	}
 
-/* Banner */
-
-	#banner {
-		padding: 5em 2em 4em 2em;
+	.features article .inner {
+		display: block;
+		width: 100%;
 	}
 
-		#banner h2 {
-			font-size: 2em;
+/* Header */
+
+	#header > header {
+		padding: 2em;
+	}
+
+		#header > header .avatar {
+			margin: 0 auto 1.6875em auto;
+			width: 6em;
 		}
 
-		#banner p {
-			font-size: 1.25em;
+		#header > header h1 {
+			font-size: 1.5em;
 		}
+
+		#header > header p {
+			margin: 1em 0 0 0;
+		}
+
+	#header > footer {
+		padding: 1.5em;
+	}
 
 /* Main */
 
-	#main {
-		padding: 4em 0 0 0;
+	#main > section > .container {
+		padding: 2em 0 0 0;
+	}
+
+/* One */
+
+	#one:before {
+		height: 7em;
 	}
 
 /* Footer */
 
 	#footer {
-		padding: 2em 0;
+		text-align: center;
 	}
 
-		#footer .copyright {
-			text-align: left;
+		#footer .copyright li {
+			border-left: 0;
+			display: block;
+			line-height: 1.75em;
+			margin: 0.75em 0 0 0;
+			padding-left: 0;
 		}
 
-			#footer .copyright li {
-				border-left: 0;
-				margin-left: 0;
-				padding-left: 0;
-				display: block;
+			#footer .copyright li:first-child {
+				margin-top: 0;
 			}
+
+/* Layers */
+
+	#titleBar .toggle {
+		height: 4em;
+		width: 6em;
+	}
+
+		#titleBar .toggle:before {
+			font-size: 14px;
+			width: 44px;
+		}
