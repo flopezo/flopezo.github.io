@@ -3,4 +3,4 @@ layout: page
 title: About me 
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+My general research interests are phylogenetics and molecular evolution. My dissertation research is focused on elucidating the evolutionary relationships of wasps in the subfamily Vespinae, which includes hornets and yellowjackets, using targeted genes and transcriptome sequencing.
