@@ -1,28 +1,64 @@
-# Site settings
-title: Federico Lopez-Osorio
-email: flopezos@uvm.edu
-url: https://flopezo.github.io
-description: "..."
+title:            Federico Lopez-Osorio
+tagline:          Phylogenetics, evolution, social wasps
+# description:      
+# canonical: 
 
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  primary-dark: '#000000'
-  links: '#219ab3'
+# Owner/author information
+owner:
+  name:           Federico Lopez-Osorio
+#  avatar:         avatar.png
+#  bio:            ""
+  email:          flopezos@uvm.edu
+  twitter:        flopezos
+  github:         flopezo
+  instagram:      
+#  location:       ""
 
-# Footer settings
-footer: Federico Lopez-Osorio
+tools:
+  standards:      "HTML, SCSS, Jekyll"
+  software:       "git"
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: https://twitter.com/flopezos
-#  - title: stack-overflow
+# Open Graph customization
+opengraph:
+  locale:           en_US
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: About
+    url: /about
+  - title: Publications
+    url: /publications
+#    external: true
+#  - title: 
 #    url: 
-#  - title: bitbucket
-#    url: 
-  - title: github
-    url: https://github.com/flopezo
+#    external: true
 
-# Build settings
-markdown: kramdown
-permalink: pretty
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+highlighter: rouge
+markdown:    kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers:
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+sass:
+    style: :compressed
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
