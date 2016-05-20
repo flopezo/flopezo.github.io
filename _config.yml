@@ -9,8 +9,7 @@
 title: Federico Lopez-Osorio
 author: Federico Lopez-Osorio
 description: > # this means to ignore newlines until "baseurl:"
-  This theme is disigned based on Mailbox Blog, and licensed under MIT.
-  This theme is also default theme for new site created by Jekyll Writer.
+  Insert description
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.jekyllwriter.com" # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title/
