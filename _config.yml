@@ -1,58 +1,24 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-name: Slim Pickins Jekyll Theme
-email: 
-author: Chrisanthropic
-
-keywords: jekyll, jekyll theme, jekyll framework, stuffthings
+title: Jekyll Writer Blog
+author: Jekyll Writer
 description: > # this means to ignore newlines until "baseurl:"
-  Witty description here.
-
-baseurl: /slim-pickins-jekyll-theme
-url: https://chrisanthropic.github.io
-
-header: yes
-header_sm: images/banner-small.jpg
-header_med: images/banner-med.jpg
-header_large: images/banner-large.jpg
-header_xl: images/banner-xl.jpg
-
-
-# Exclude our ruby stuff
-exclude: [.bundle, bin, vendor, Gemfile, Gemfile.lock, Rakefile, s3_website.yml, .last_optimized]
-
+  This theme is disigned based on Mailbox Blog, and licensed under MIT.
+  This theme is also default theme for new site created by Jekyll Writer.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://blog.jekyllwriter.com" # the base hostname & protocol for your site
+permalink: /:year/:month/:day/:title/
+paginate: 6
+paginate_path: "/page/:num/"
+twitter_username: jekyllwriter
+github_username:  jekyllwriter
+gems: [jekyll-paginate]
 
 # Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-
-destination: _site
-
-gems:
-  - jekyll-feed
-
-feed:
-  path: atom.xml
-  
-# Compress our Css
-#sass:
-#    style: :compressed
-
-permalink: /blog/:year/:title
-
-#### SEO Stuff
-# Google Analytics
-google_universal_analytics: 
-google_universal_analytics_cookiedomain: auto
-
-# Facebook Opengraph
-facebook_user:
-facebook_app_id:                      #enter your App ID
-facebook_locale: en_US
-facebook_page:                        #the URL of your Facebook Page
-facebook_image:                       #enter a default image (at least 200x200px) to use here for posts/pages that don't have one.
-
-# Twitter Cards
-twitter_user: 
-twitter_card: true
-twitter_image:                        #enter a default image (at least 200x200px) to use here for posts/pages that don't have one.
