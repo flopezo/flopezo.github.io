@@ -1,64 +1,46 @@
-title:            Federico Lopez-Osorio
-tagline:          Phylogenetics, evolution, social wasps
-# description:      
-# canonical: 
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Owner/author information
-owner:
-  name:           Federico Lopez-Osorio
-#  avatar:         avatar.png
-#  bio:            ""
-  email:          flopezos@uvm.edu
-  twitter:        flopezos
-  github:         flopezo
-  instagram:      
-#  location:       ""
-
-tools:
-  standards:      "HTML, SCSS, Jekyll"
-  software:       "git"
-
-# Open Graph customization
-opengraph:
-  locale:           en_US
-
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about
-  - title: Publications
-    url: /publications
-#    external: true
-#  - title: 
-#    url: 
-#    external: true
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-future:      true
-highlighter: rouge
-markdown:    kramdown
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-  coderay:
-    coderay_line_numbers:
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
+source: source
+destination: _site
 sass:
-    style: :compressed
+  sass_dir: _sass
+  style: expanded # compressed # expanded
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
+# permalink and highlighter
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : pygments
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+# SEO settings
+title: dotX
+description: "A free Jekyll theme for download"
+keywords: "Jekyll, theme, free, download, SEO, blog, web"
+
+# Site settings
+url: http://nandomoreira.me
+baseurl: "/dotX"
+# baseurl: ""
+
+# Author settings
+author:
+  name      : Fernando Moreira
+  job       : Frontend Engineer
+  bio       : "Enthusiast performance, responsive design and usability, always looking for the best project and good coffee."
+  thumb     : /images/author.jpg
+  email     : nandomoreira.me@gmail.com
+  url       : http://nandomoreira.me
+  github    : http://github.com/nandomoreirame
+  twitter   : http://twitter.com/nandomoreirame
+  facebook  : http://facebook.com/fernando.dev
+  linkedin  : http://linkedin.com/in/nandomoreirame
+
+# google_analytics: UA-52446115-1
+repo: http://github.com/nandomoreirame/dotX
+
+# comments
+disqus_shortname: "fernandomoreira"
