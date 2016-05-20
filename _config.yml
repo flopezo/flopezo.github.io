@@ -1,30 +1,26 @@
-baseurl: /tufte-jekyll 
-title: Tufte
-subtitle: Content-centric blogging
-author: clay harmon
-simple_search: http://google.com/search
-description: A Jekyll theme for content-rich sites
-name: tufte
-markdown: Kramdown
-kramdown:  
-  input: GFM
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+# general configuration
+url: http://excentris.net
+baseurl: ''
+
+# compass configuration
+compass:
+  # an avatar or logo (optional)
+  logo: "/images/compass.png"
+  # author will appear under the avatar (optional)
+  author: "Compass"
+  # tagline will appear under the title (optional)
+  tagline: "The <a href='http://jekyllrb.com'>Jekyll</a> theme for your personal landing page"
+  # if include_content is true, the contents of the content.html include will be
+  # added right above the generated item list, if present
+  include_content: true
+  # if include_analytics is true, the content of the analytics.html include will
+  # be added at the end of the <head> section. You can add your Google Analytics
+  # Tracking Code to that file.
+  include_analytics: false
+
+# Dependencies
+markdown: kramdown
 highlighter: rouge
-permalink: /articles/:short_year/:title
-timezone: America/New_York
-excerpt_separator: <!--more-->  # you can specify your own separator, of course.
-exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
-post:
-  template: _post.txt
-  extension: md
-page:
-  template: _page.txt
-  extension: md
-editor: gvim
-git:
-  branch: master
-transfer:
-  command: rsync
-  settings: -av
-  source: _site/
-  destination: ~/Git/clayh53.github.com/
+
+# Permalinks
+permalink: pretty
