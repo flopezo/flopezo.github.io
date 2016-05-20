@@ -1,69 +1,15 @@
-# Holo Alfa Jekyll theme [![Build Status](https://travis-ci.org/steinvc/holo-alfa.svg?branch=master)](https://travis-ci.org/steinvc/holo-alfa) #
+# Much-Worse jekyll theme
 
-![Screenshot](http://i.imgur.com/Gi46aag.jpg)
+This is a modified version of [Steve Miller's NGVM theme](http://jekyllthemes.org/themes/svm-ngvb/). Since this work is a derivative of Prof. Miller's, therefore it is only fair that I honour his self-deprecating spirit and name this **much-worse**. I prefer large seriff fonts and minimal coloring and styling. Apart form the typography, color scheme and layout,
+this theme has two useful changes:
 
-Holo Alfa is a minimalist, mobile first Jekyll theme with focus on readability and content. Created for free and fun by Stijn.
+- It allows you to maintain your website as a subdirectory on your university of company domain (e.g. http://university.edu/department/people/your-website). Most Jekyll blogs are
+designed to be hosted at custom domain names.
 
-See it in action: http://steinvc.github.io/holo-alfa/.
+- Most jekyll themes are blog-centric, or single page websites. This theme lets you create multi-page website with a blog if you want.
 
-## Feature highlights ##
+Both the above are not seminal achievements in science, but they are useful. This theme also supports site analytics including [Statcounter](http://statcounter.com) and major comment providers for blogs.
 
-* Mobile first design
-* Extensive content styling
-* Responsive video's (using [FitVids.JS](http://fitvidsjs.com/))
-* Support for authors and guest authors
-* Read time on articles
-* Disqus comments
-* Automatic [og metadata](http://ogp.me/)
-* Automatic archive page (without plugins)
-* Automatic sitemap en RSS feed
-* Contact page (with working email form)
-* A lot of (optional) customization options (all in `_config.yml`)
+See it in action [here](http://people.csail.mit.edu/gchauras).
 
-And much more.
-
-## Getting started ##
-
-If you're new to Jekyll, check out http://jekyllrb.com/ and read up on Jekyll. It's worth it.
-
-* [Another great resource to learn about Jekyll](http://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/)
-* [Github's guide to using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages/)
-
-If you run one of the latest versions of Jekyll, this theme will work with no* problems.
-
-### Installing ##
-
-As simple as forking the repository, and then clone it so you can edit the files locally.
-
-### Configuration ###
-
-Edit `_config.yml`!
-
-You can find `_config.yml` in your site's root directory. This configuration file contains some necessary settings and some optional customization settings. **All settings are explained in `_config.yml` itself.**
-
-There are some customizations that can't be done in `_config.yml`. These include:
-
-* Editing the About, Contact and Archive page.
-* Adding or removing pages from the navigation. This can be done in `\_includes\navigation.html`.
-* The "thanks" page after a message has been send through the contact page: `thanks.md`
-* The gradient on cover images: `\_includes\gradient.css` (this is explained in `_config.yml`).
-
-Also make sure to replace the placeholder favicons and the `\img\og-image.jpg` with your own.
-
-### Start the Jekyll server ###
-
-Run this command at the root of your site:
-
-```
-$ jekyll serve
-```
-
-> To run Jekyll in a way that matches the GitHub Pages build server, run Jekyll with Bundler. Use the command `bundle exec jekyll serve`.
-
-When everything is OK, your site should now be available at `http://localhost:4000`.
-
-That's it.
-
----
-
-[MIT license](http://opensource.org/licenses/MIT)
+Feel free to send me pull requests with better responsive performance or cleaner HTML/CSS.
