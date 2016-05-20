@@ -1,4 +1,6 @@
-//  Reset some basic elements
+/**
+ * Reset some basic elements
+ */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -6,47 +8,31 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-html {
-    overflow-y: scroll;
-}
-
-// Basic styling
-body {
-    font-family: $base-font-family;
-    font-size:   $base-font-size;
-    line-height: $base-line-height;
-    color:       $text-color;
-    background-color: $background;
-    margin: 0 $spacing-unit/2;
-    -webkit-text-size-adjust: 100%;
-}
-
-
-// Set `margin-bottom` to maintain vertical rhythm
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit/2;
+    margin-bottom: $spacing-unit / 2;
 }
 
-hr {
-    display: block;
-    margin: 0.5em auto;
-    border-style: inset;
-    border-top: 1px solid $line-color;
-    border-bottom: none;
 
-}
 
-// Images
+/**
+ * Images
+ */
 img {
     max-width: 100%;
-    margin: auto auto;
     vertical-align: middle;
 }
 
-// Figures
+
+
+/**
+ * Figures
+ */
 figure > img {
     display: block;
 }
@@ -55,7 +41,11 @@ figcaption {
     font-size: $small-font-size;
 }
 
-//  Lists
+
+
+/**
+ * Lists
+ */
 ul, ol {
     margin-left: $spacing-unit;
 }
@@ -67,42 +57,62 @@ li {
     }
 }
 
-//  Headings
+
+/**
+ * Headings
+ */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+    font-weight: 300;
 }
 
-// Links
+
+
+/**
+ * Links
+ */
 a {
-    color: $url-color;
+    color: $link-color;
     text-decoration: none;
+
+    &:visited {
+        color: $link-visited-color;
+    }
+
     &:hover {
-        color: $url-hover-color;
-        text-decoration: none;
+        color: link-hover-color;
+        text-decoration: underline;
     }
 }
 
-// Blockquotes
+
+
+/**
+ * Blockquotes
+ */
 blockquote {
-    background-color: $dark-background;
-    border-left: 4px solid darken($line-color, 66%);
-    padding-left:   1.0em;
-    padding-right:  0.8em;
-    padding-top:    0.8em;
-    padding-bottom: 0.001em;
+    color: darken($body-bg, 25%);
+    border-left: 4px solid lighten($complimentary-color, 35%);
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
     font-style: italic;
+
     > :last-child {
         margin-bottom: 0;
     }
 }
 
-// Code formatting
-pre, code {
-    border: 1px solid $line-color;
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid darken($complimentary-color, 15%);
     border-radius: 3px;
-    background-color: $dark-background;
-    font-family: monospace;
-    font-size: $small-font-size;
+    background-color: #eef;
 }
 
 code {
@@ -120,43 +130,33 @@ pre {
     }
 }
 
-// Icons
-.icon {
-    > svg {
-        display: inline-block;
-        width: 0.75em;
-        height: 0.75em;
-        vertical-align: middle;
-        path {
-            fill: $text-color;
-        }
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
     }
 }
 
-.footnotes ol li {
-    list-style-type:decimal;
-}
-.footnotes ol {
-    font-size: $vsmall-font-size;
-    color: $text-light-color;
-}
 
-ul.listing {
-    list-style-type: none;
-    margin-left: 0;
-}
 
-ul.listing li.listing-seperator {
-    padding-top: 0.75em;
-    font-size: 1.17em;
-}
+/**
+ * Icons
+ */
+.icon {
 
-ul.listing li.listing-item time {
-    color: $text-light-color;
-    text-transform: uppercase;
-    padding-right: 0.5em;
-}
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
 
-ul.listing li.listing-item a {
-    color: $url-color;
+        path {
+            fill: $complimentary-color;
+        }
+    }
 }

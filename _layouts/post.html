@@ -1,26 +1,12 @@
 ---
 layout: default
 ---
-<div class="post">
+<article class="row post-content">
+
     <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }} {% if page.author %}by {{ page.author }}{{% else %}}by {{ site.author_name }}{% endif %}{% if page.location %} ({{ page.location }}{% endif %})</p>
-
-    {% if page.description %}
-    <p class="post-meta">Description: {{ page.description }}</p>
-    {% endif %}
-
-    {% if page.categories %}
-    <p class="post-meta">Categories:
-    {% for cat in page.categories %}
-    <a href="/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
-    {% endfor %}
-
-    </p>
-    {% endif %}
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
     </header>
-
     {{ content }}
 
-    {% include comments.html %}
-</div>
+</article>
