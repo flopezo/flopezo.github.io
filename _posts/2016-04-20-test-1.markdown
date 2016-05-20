@@ -1,7 +1,0 @@
----
-layout: default
-category: 
-title: Test post
-description: |
----
-  Test post

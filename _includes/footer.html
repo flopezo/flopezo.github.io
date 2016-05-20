@@ -1,30 +1,15 @@
-<!-- Footer -->
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <ul class="list-inline">
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted small">{{ site.copyright }}</p>
-            </div>
-            <div class="col-md-4">
-                {{ site.credits }}
-            </div>
-        </div>
-    </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:hate@spam.net"><span class="icon-mail"></span></a></li>    
+    {% for entry in site.data.social %}
+      <li>
+        <a href="{{ entry.link }}"><span class="{{ entry.icon }}"></span></a>
+      </li>
+    {% endfor %}  
+  </ul>
+<div class="credits">
+<span>&copy; {{ site.time | date: '%Y' }} &nbsp;&nbsp;{{site.author | upcase }}</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for {{site.subtitle}} </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
 </footer>
