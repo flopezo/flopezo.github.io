@@ -1,6 +1,6 @@
 ---
-layout: home
-permalink: /articles/index.html
+layout: default
+permalink: articles/
 title: "Articles"
 tags: []
 ---
