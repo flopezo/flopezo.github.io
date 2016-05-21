@@ -1,64 +1,29 @@
-title:            Federico Lopez-Osorio
-tagline:          Phylogenetics, evolution, social wasps
-# description:      
-# canonical: 
+# Site settings
+title: Daktilo
+description: >
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 
-# Owner/author information
-owner:
-  name:           Federico Lopez-Osorio
-#  avatar:         avatar.png
-#  bio:            ""
-  email:          flopezos@uvm.edu
-  twitter:        flopezos
-  github:         flopezo
-  instagram:      
-#  location:       ""
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://hitchhiker.ma" # the base hostname & protocol for your site
 
-tools:
-  standards:      "HTML, SCSS, Jekyll"
-  software:       "git"
+author:
+  fullname: Motaquillah Maddane
+  googleplus: https://www.google.com/+MotaquillahMaddane
+  github: kronik3r
+  twitter: electrik_frog
+  # disqus: your_disqus_forum_shortname
 
-# Open Graph customization
-opengraph:
-  locale:           en_US
+# google_analytics: 'UA-XXXXXXXX-X'
 
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about
-  - title: Publications
-    url: /publications
-#    external: true
-#  - title: 
-#    url: 
-#    external: true
+# Syntax highlighting
+highlightstyle: ''
+styles: [agate, androidstudio, arta, asceti, atelier-cave.dark, atelier-cave.light, atelier-dune.dark, atelier-dune.light, atelier-estuary.dark, atelier-estuary.light, atelier-forest.dark, atelier-forest.light, atelier-heath.dark, atelier-heath.light, atelier-lakeside.dark, atelier-lakeside.light, atelier-plateau.dark, atelier-plateau.light, atelier-savanna.dark, atelier-savanna.light, atelier-seaside.dark, atelier-seaside.light, atelier-sulphurpool.dark, atelier-sulphurpool.light, brown_paper, codepen-embed, color-brewer, dark, darkula, default, docco, far, foundation, github, github-gist, googlecode, grayscale, hopscotch, hybrid, idea, ir_black, kimbie.dark, kimbie.light, magula, mono-blue, monokai, monokai_sublime, obsidian, paraiso.dark, paraiso.light, pojoaque, railscast, rainbow, school_book, solarized_dark, solarized_light, styles_list.txt, sunburst, tomorrow, tomorrow-night-blue, tomorrow-night-bright, tomorrow-night, tomorrow-night-eightie, v, xcode, zenburn]
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-future:      true
-highlighter: rouge
-markdown:    kramdown
+# Handling Reading
+exclude: ["README.md", "README.html"]
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-  coderay:
-    coderay_line_numbers:
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-sass:
-    style: :compressed
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+# Build settings
+highlighter: null
+markdown: kramdown

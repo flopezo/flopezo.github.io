@@ -1,11 +1,12 @@
 ---
-layout: post
-permalink: /about/index.html
+layout: page
 title: About
-description: 
-tags: [about]
-image:
-  feature: mountains3.jpg
+subtitle: Just who the hell you think I am?
+permalink: /about/
 ---
 
-My general research interests are phylogenetics and molecular evolution. My research is focused on elucidating the evolutionary relationships of wasps in the subfamily Vespinae, which includes hornets and yellowjackets, using targeted genes and transcriptome sequencing.
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+
+You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+
+You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
