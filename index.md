@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Home
 subtitle: Just who the hell you think I am?
 ---
 
