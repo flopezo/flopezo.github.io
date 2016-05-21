@@ -1,7 +1,7 @@
 ---
-layout: page
-title: Federico Lopez-Osorio
-subtitle: Phylogenetics, evolution, social wasps
+layout: home
+title: "Recent Posts"
+tags: []
+image:
+  feature: 
 ---
-
-...
