@@ -8,6 +8,7 @@ description: "Phylogenetics of social wasps"
 color:
   #primary-dark: '#000000'
   primary-dark: '#FF7D68'
+  primary-fuchsia: '#6F0564'
   links: '#219ab3'
 
 # Footer settings
