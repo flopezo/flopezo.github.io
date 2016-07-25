@@ -10,7 +10,7 @@ color:
   primary-dark: '#FF7D68'
   primary-fuchsia: '#6F0564'
   primary-blue-bell: '#9F8FC6'
-  links: '#219ab3'
+  links: '#9F8FC6'
   links-secondary: '#FFA366'
 
 # Footer settings
