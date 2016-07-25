@@ -251,6 +251,7 @@ a:focus {
 
 .content-section {
     padding-top: 100px;
+    background-color: {{ site.color.primary-blue-bell }};
 }
 
 .download-section {
