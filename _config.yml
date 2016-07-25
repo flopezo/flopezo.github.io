@@ -1,64 +1,30 @@
-title:            Federico Lopez-Osorio
-tagline:          Phylogenetics, evolution, social wasps
-# description:      
-# canonical: 
+# Site settings
+title: Grayscale
+email: your-email@domain.com
+url: https://example.github.io
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 
-# Owner/author information
-owner:
-  name:           Federico Lopez-Osorio
-#  avatar:         avatar.png
-#  bio:            ""
-  email:          flopezos@uvm.edu
-  twitter:        flopezos
-  github:         flopezo
-  instagram:      
-#  location:       ""
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-dark: '#000000'
+  links: '#219ab3'
 
-tools:
-  standards:      "HTML, SCSS, Jekyll"
-  software:       "git"
+# Footer settings
+footer: Your Website
 
-# Open Graph customization
-opengraph:
-  locale:           en_US
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/SBootstrap
+  - title: facebook
+    url:
+  - title: stack-overflow
+    url: http://stackoverflow.com/questions/tagged/jekyll
+  - title: bitbucket
+    url: http://bitbucket.org/jekyll
+  - title: github
+    url: https://github.com/IronSummitMedia/startbootstrap
 
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about
-  - title: Publications
-    url: /publications
-#    external: true
-#  - title: 
-#    url: 
-#    external: true
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-future:      true
-highlighter: rouge
-markdown:    kramdown
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-  coderay:
-    coderay_line_numbers:
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-sass:
-    style: :compressed
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+# Build settings
+markdown: kramdown
+permalink: pretty
