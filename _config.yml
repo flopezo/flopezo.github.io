@@ -7,7 +7,8 @@ description: "Phylogenetics of social wasps"
 # Color settings (hex-codes without the leading hash-tag)
 color:
   #primary-dark: '#000000'
-  primary-dark: '#FF7D68'
+  #primary-dark: '#FF7D68'
+  primary-dark: '#F8776C'
   primary-fuchsia: '#6F0564'
   primary-blue-bell: '#9F8FC6'
   links: '#9F8FC6'
