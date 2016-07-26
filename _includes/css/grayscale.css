@@ -250,8 +250,10 @@ a:focus {
 }
 
 .content-section {
+/*    padding-top: 100px;
+    background-color: {{ site.color.primary-blue-bell }};*/
     padding-top: 100px;
-    /*background-color: {{ site.color.primary-blue-bell }};*/
+    background-color: {{ site.color.primary-dark }};
 }
 
 .download-section {
