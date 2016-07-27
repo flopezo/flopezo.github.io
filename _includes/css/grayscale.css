@@ -59,6 +59,13 @@ a:focus {
     color: #FDB632;
 }
 
+li {
+    margin: 0 0 25px;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: Lora;
+}
+
 .light {
     font-weight: 400;
 }
