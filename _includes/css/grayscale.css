@@ -67,6 +67,10 @@ a:focus {
     text-align: left;
 }*/
 
+ul {
+    margin: 0px;
+}*/
+
 .light {
     font-weight: 400;
 }
