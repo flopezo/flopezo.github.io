@@ -59,13 +59,13 @@ a:focus {
     color: #FDB632;
 }
 
-li {
+/*li {
     margin: 0px;
     font-size: 18px;
     line-height: 1.5;
     font-family: "Helvetica Neue";
     text-align: left;
-}
+}*/
 
 .light {
     font-weight: 400;
