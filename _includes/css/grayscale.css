@@ -262,13 +262,13 @@ a:focus {
 .content-section {
 /*  padding-top: 100px;
     background-color: {{ site.color.primary-orange }};  */
-    padding-top: 0px;
+    padding-top: 100px;
     background-color: {{ site.color.primary-dark }};
 }
 
 .download-section {
     width: 100%;
-    padding: 50px 0;
+    padding: 50px 100px;
     color: #fff;
 /*    background: url(/img/publications-bg.jpg) no-repeat center center scroll;
     background-color: {{ site.color.primary-dark }};*/
