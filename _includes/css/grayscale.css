@@ -260,9 +260,9 @@ a:focus {
 }
 
 .content-section {
-/*    padding-top: 100px;
-    background-color: {{ site.color.primary-orange }};*/
-    padding-top: 100px;
+/*  padding-top: 100px;
+    background-color: {{ site.color.primary-orange }};  */
+    padding-top: 0px;
     background-color: {{ site.color.primary-dark }};
 }
 
