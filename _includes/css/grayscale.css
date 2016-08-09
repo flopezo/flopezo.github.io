@@ -268,7 +268,7 @@ a:focus {
 
 .download-section {
     width: 100%;
-    padding: 50px 0;
+    padding: 50px 50px;
     color: #fff;
 /*    background: url(/img/publications-bg.jpg) no-repeat center center scroll;
     background-color: {{ site.color.primary-dark }};*/
