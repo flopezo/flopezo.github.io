@@ -37,7 +37,7 @@ p {
 }
 
 p.pub {
-    margin: 0 0 0px;
+    margin: 0 0 0 0px;
     padding: 0px;
     font-size: 18px;
     line-height: 1.5;
