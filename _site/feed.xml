@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Federico Lopez-Osorio</title>
+    <description>Phylogenetic and Evolution of Social Wasps</description>
+    <link>http://www.federicolopez.org/</link>
+    <atom:link href="http://www.federicolopez.org/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Test Post</title>
+        <description>&lt;p&gt;This is a test.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 03 Oct 2016 00:00:00 -0400</pubDate>
+        <link>http://www.federicolopez.org/test/2016/10/03/test/</link>
+        <guid isPermaLink="true">http://www.federicolopez.org/test/2016/10/03/test/</guid>
+      </item>
+    
+      <item>
+        <title>New Lab Notebook</title>
+        <description>&lt;p&gt;This is a test.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 02 Oct 2016 00:00:00 -0400</pubDate>
+        <link>http://www.federicolopez.org/jekyll/pixyll/2016/10/02/notebook_first_post/</link>
+        <guid isPermaLink="true">http://www.federicolopez.org/jekyll/pixyll/2016/10/02/notebook_first_post/</guid>
+      </item>
+    
+  </channel>
+</rss>

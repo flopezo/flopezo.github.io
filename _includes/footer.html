@@ -1,6 +1,16 @@
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; {{ site.footer }} 20{{ site.time | date: '%y' }}</p>
-        </div>
-    </footer>
+<footer class="center">
+  <div class="measure">
+    <small>
+      Federico Lopez-Osorio 2016<br>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+      Pixyll theme available on <a href="https://github.com/johnotander/pixyll">Github</a><br>
+      Powered by <a href=http://jekyllrb.com target="_blank">Jekyll</a>
+    </small>
+  </div>
+</footer>
+{% if site.enable_anchorjs %}<!-- AnchorJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.0.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'always';
+    anchors.add('article h2, article h3, article h4, article h5, article h6');
+</script>{% endif %}
