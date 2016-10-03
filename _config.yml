@@ -16,7 +16,7 @@ google_tag_manager:
 
 # Optional features
 #animated:             false
-animated:             true
+animated:             false
 show_related_posts:   false
 show_post_footers:    false
 show_social_icons:    true
@@ -28,16 +28,6 @@ enable_anchorjs: false
 # (for instant articles and other stuff)
 fb_page: false
 fb_page_id: 
-
-# Disqus post comments
-# (leave blank to disable Disqus)
-disqus_shortname:
-
-# Facebook Comments plugin
-# (leave blank to disable Facebook Comments, otherwise set it to true)
-facebook_comments:
-facebook_appid:
-facebook_comments_number: 10
 
 # Social icons
 github_username: flopezo
@@ -54,14 +44,6 @@ share_twitter: false
 share_googleplus: false
 
 text:
-  pagination:
-    newer: 'Newer'
-    older: 'Older'
-  share_buttons:
-    text:         'Share this post!'
-    facebook:     'Share on Facebook'
-    twitter:      'Share on Twitter'
-    googleplus:   'Share on Google+'
   post:
     updated:        'Updated'
     minute_read:    'minute read'
@@ -77,7 +59,6 @@ paginate:     4
 sass:
   compressed: true
 gems:
-  - jekyll-paginate
   - jekyll-sitemap
 # https://github.com/jekyll/jekyll/issues/2938
 exclude: [vendor]

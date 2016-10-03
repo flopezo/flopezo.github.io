@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://www.federicolopez.org/test/2016/10/03/test/</loc>
+    <lastmod>2016-10-03T00:00:00-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.federicolopez.org/jekyll/pixyll/2016/10/02/notebook_first_post/</loc>
+    <lastmod>2016-10-02T00:00:00-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.federicolopez.org/404.html</loc>
+  </url>
+  <url>
+    <loc>http://www.federicolopez.org/articles/</loc>
+  </url>
+  <url>
+    <loc>http://www.federicolopez.org/</loc>
+  </url>
+  <url>
+    <loc>http://www.federicolopez.org/publications/</loc>
+  </url>
+  <url>
+    <loc>http://www.federicolopez.org/thanks/</loc>
+  </url>
+</urlset>
