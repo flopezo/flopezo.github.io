@@ -1,12 +1,12 @@
 .site-header {
   padding-top: $space-1;
-  padding-bottom: $space-2;
+  padding-bottom: $space-3;
 }
 
 // Style for entire set of navigation links
 .site-header a {
   color: #333;
-  font-size: $h3;
+  font-size: $h2;
   font-weight: 600;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
   text-shadow: none;
@@ -14,7 +14,7 @@
 }
 
 .site-header .site-title {
-  font-size: $h2;
+  font-size: $h3;
 }
 
 .site-nav {
@@ -24,7 +24,7 @@
 // Style for navigation bar
 .site-header nav a {
   color: #333;
-  font-size: $h4;
+  font-size: $h3;
 }
 
 .site-header nav a:hover,

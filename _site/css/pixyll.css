@@ -587,9 +587,7 @@ body {
   -webkit-box-sizing: border-box; }
 
 a {
-  color: #0076df;
-  background-image: linear-gradient(to top, transparent 13%, rgba(0, 118, 223, 0.8) 13%, rgba(0, 118, 223, 0.8) 18%, transparent 17%);
-  text-shadow: none; }
+  color: #0076df; }
 
 a:hover,
 a:focus,
@@ -597,7 +595,6 @@ a:active {
   border: 0;
   color: #000a13;
   text-decoration: none;
-  background-image: linear-gradient(to top, transparent 13%, rgba(0, 10, 19, 0.8) 13%, rgba(0, 10, 19, 0.8) 17%, transparent 17%);
   text-shadow: none; }
 
 button,
@@ -622,7 +619,8 @@ button,
   border: 0;
   color: #000a13;
   text-shadow: none;
-  background-image: none; }
+  background-image: none;
+  text-decoration: none; }
 
 .left {
   float: left; }
@@ -720,25 +718,25 @@ sup {
 
 .site-header {
   padding-top: 0.5rem;
-  padding-bottom: 1rem; }
+  padding-bottom: 2rem; }
 
 .site-header a {
   color: #333;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
   text-shadow: none;
   background-image: none; }
 
 .site-header .site-title {
-  font-size: 1.5rem; }
+  font-size: 1.25rem; }
 
 .site-nav {
   margin-top: 1rem; }
 
 .site-header nav a {
   color: #333;
-  font-size: 1rem; }
+  font-size: 1.25rem; }
 
 .site-header nav a:hover,
 .site-header nav a:focus,
@@ -860,8 +858,8 @@ footer {
   background-color: #eee;
   border-top: thin solid #f3f3f3;
   color: #7a7a7a;
-  font-size: 0.75rem;
-  font-weight: 300;
+  font-size: 0.8rem;
+  font-weight: 400;
   padding: 0.5rem;
   text-align: center; }
 
@@ -872,7 +870,6 @@ footer {
 
 .social-icons {
   font-size: 1.25rem;
-  padding: 0.5em 0 0 0;
   width: 100%; }
 
 .social-icons a.fa {
@@ -881,10 +878,12 @@ footer {
   padding: 0.2em; }
 
 .social-icons a.fa:hover {
-  opacity: 1; }
+  opacity: 1;
+  text-align: center; }
 
 .social-icons iframe[title=Flattr] {
   position: relative;
+  text-align: center;
   top: 0.1em; }
 
 blockquote {

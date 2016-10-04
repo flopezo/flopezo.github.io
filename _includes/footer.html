@@ -1,8 +1,23 @@
 <footer class="center">
-  <div class="measure">
+<div class="measure">
     <medium>
-      Federico Lopez-Osorio 2016<br>
-      Pixyll theme available on <a href="https://github.com/johnotander/pixyll">Github</a><br>
+      Federico Lopez-Osorio 2016
+      {% if site.twitter_username %}
+        <a href="mailto:{{ site.email }}">
+          <i class="fa fa-envelope fa-lg"></i>
+        </a>
+      {% endif %}
+      {% if site.twitter_username %}
+        <a href="https://twitter.com/{{ site.twitter_username }}">
+          <i class="fa fa-twitter fa-lg"></i>
+        </a>
+      {% endif %}
+      {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}">
+          <i class="fa fa-github fa-lg"></i>
+        </a>
+      {% endif %}<br>
+      Pixyll theme available on <a href="https://github.com/johnotander/pixyll">GitHub</a><br>
       Powered by <a href=http://jekyllrb.com target="_blank">Jekyll</a>
     </medium>
   </div>
