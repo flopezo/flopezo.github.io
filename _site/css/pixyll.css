@@ -572,7 +572,16 @@ MIT License http://opensource.org/licenses/MIT
 html, body {
   height: auto;
   min-height: 100%;
-  background-color: #fdb632; }
+  background-color: #fdb632;
+  background: url(/images/intro-bg1.jpg) no-repeat bottom center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-shadow: none; }
+
+html.articles, body.articles {
+  background-color: #ccc; }
 
 img {
   max-width: 100%; }
