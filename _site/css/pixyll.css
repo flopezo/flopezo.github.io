@@ -589,12 +589,14 @@ body {
 a {
   color: #0076df; }
 
+a.social {
+  text-decoration: none; }
+
 a:hover,
 a:focus,
 a:active {
   border: 0;
   color: #000a13;
-  text-decoration: none;
   text-shadow: none; }
 
 button,
@@ -717,22 +719,22 @@ sup {
   top: -0.9ex; }
 
 .site-header {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   padding-bottom: 2rem; }
 
 .site-header a {
   color: #333;
-  font-size: 1.5rem;
   font-weight: 600;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-  text-shadow: none;
-  background-image: none; }
+  text-shadow: none; }
 
 .site-header .site-title {
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  color: #0076df;
+  margin-top: 5px; }
 
 .site-nav {
-  margin-top: 1rem; }
+  margin-top: 0.5rem; }
 
 .site-header nav a {
   color: #333;
@@ -743,7 +745,7 @@ sup {
 .site-header nav a:active {
   color: #444;
   opacity: 1;
-  border-bottom: 2px solid #444; }
+  text-decoration: underline; }
 
 .site-nav a + a {
   margin-left: 1em; }
