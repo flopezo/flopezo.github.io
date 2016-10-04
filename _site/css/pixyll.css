@@ -731,7 +731,8 @@ sup {
 .site-header .site-title {
   font-size: 1.25rem;
   color: #0076df;
-  margin-top: 5px; }
+  margin-top: 5px;
+  text-decoration: none; }
 
 .site-nav {
   margin-top: 0.5rem; }
@@ -754,7 +755,8 @@ sup {
 .posts .post a:hover .post-meta,
 .posts .post a:hover .post-title,
 .posts .post a:hover .post-summary {
-  opacity: 0.88; }
+  opacity: 0.88;
+  color: #ffffff; }
 
 .site-header {
   text-align: center; }
