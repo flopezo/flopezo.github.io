@@ -16,7 +16,7 @@ google_tag_manager:
 
 # Optional features
 #animated:             false
-animated:             true
+animated:             false
 show_related_posts:   false
 show_post_footers:    false
 show_social_icons:    true
