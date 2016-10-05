@@ -11,6 +11,4 @@ I am a biologist interested in the evolution of social behavior. Specifically, I
 
 ![alt text](https://flopezo.github.io/images/vsquamosa_head_small.png)
 
-.center {
-  text-align: center;
 }
