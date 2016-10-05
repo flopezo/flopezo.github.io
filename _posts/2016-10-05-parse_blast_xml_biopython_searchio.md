@@ -36,5 +36,4 @@ for xml_file in sys.argv[2:]:
     			str(hit.seq_len), str(hsp.evalue)]
                 out.write("\t".join(fields) + "\n")
 out.close()
-}
 ```
