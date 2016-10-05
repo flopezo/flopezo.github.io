@@ -30,10 +30,10 @@ for xml_file in sys.argv[2:]:
     result_handle = open(xml_file)
     qresults = SearchIO.parse(result_handle, 'blast-xml')
     for qres in qresults:
-    	for hit in qres.hits:
-    		for hsp in qres.hsps:
-    			fields = [qres.id, qres.description, str(qres.seq_len), hit.id, hit.description,
-    			str(hit.seq_len), str(hsp.evalue)]
+        for hit in qres.hits:
+    	    for hsp in qres.hsps:
+    		    fields = [qres.id, qres.description, str(qres.seq_len), hit.id, hit.description, 
+    		    str(hit.seq_len), str(hsp.evalue)]
                 out.write("\t".join(fields) + "\n")
 out.close()
 ```
