@@ -1,7 +1,7 @@
 ---
 layout:     page
 title:      Parsing BLAST XML output using Bio.SearchIO 
-date:       2016-10-03
+date:       2016-10-05
 summary:    Test Post
 categories: Test
 ---
