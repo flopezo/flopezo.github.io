@@ -28,8 +28,8 @@ out = open(sys.argv[1], 'w')
 out.write("Query Name\tQuery Definition\tQuery Length\tHit ID\tHit Defintion\tHit Length\teValue\n")
 for xml_file in sys.argv[2:]:
     result_handle = open(xml_file)
-	qresults = SearchIO.parse(result_handle, 'blast-xml')
-	for qres in qresults:
+    qresults = SearchIO.parse(result_handle, 'blast-xml')
+    for qres in qresults:
 	    for hit in qres.hits:
 	        for hsp in hit.hsps:
 	            fields = [qres.id, qres.description, str(qres.seq_len), hit.id, hit.description, 
