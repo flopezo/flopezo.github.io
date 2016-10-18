@@ -8,7 +8,7 @@ categories: Test
 
 The package `SearchIO` from Biopython parses outputs from BLAST and other sequence search programs; `SearchIO` will eventually replace [`Bio.Blast.NCBIXML`](http://biopython.org/DIST/docs/api/Bio.Blast.NCBIXML-module.html). Further detail about `SearchIO` is available in its [official documentation](http://biopython.org/DIST/docs/api/Bio.SearchIO-module.html) and on [Biopython's wiki](http://biopython.org/wiki/SearchIO).
 
-In this example, I use `SearchIO` to parse BLAST output in XML format and extract specific contents. The correspondence between elements in the BLAST XML output and attributes for each `SearchIO` object are available [here](http://biopython.org/DIST/docs/api/Bio.SearchIO.BlastIO-module.html). 
+In this example, I use `SearchIO` to parse BLAST output in XML format and extract specific contents. The correspondence between elements in the BLAST XML output and attributes for each `SearchIO` object is available [here](http://biopython.org/DIST/docs/api/Bio.SearchIO.BlastIO-module.html). 
 
 ```python
 #!/usr/bin/env python
