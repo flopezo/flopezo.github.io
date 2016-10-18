@@ -61,7 +61,11 @@ Third, align reads. Reads in FASTQ format were previously trimmed using [Trimmom
 ```bash
 # Map reads
 # Usage: bowtie2 -x index_name -1 reads_1.fq -2 reads_2.fq -S outfile.sam
-bowtie2 -x vgermanica_mitogenome -1 ../reads_1_paired.fq.qc.gz -2 ../reads_2_paired.fq.qc.gz -S reads_x_vgermanica.bowtie.sam -p 2 --very-sensitive
+bowtie2 -x vgermanica_mitogenome \
+	-1 ../reads_1_paired.fq.qc.gz \
+	-2 ../reads_2_paired.fq.qc.gz \
+	-S reads_x_vgermanica.bowtie.sam \
+	-p 2 --very-sensitive
 ```
 
 The overall alignment rate was 0.34% or 484,347 reads.
