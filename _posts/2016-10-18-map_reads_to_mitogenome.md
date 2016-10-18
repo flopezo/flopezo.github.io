@@ -70,7 +70,7 @@ bowtie2 -x vgermanica_mitogenome \
 
 The overall alignment rate was 0.34% or 484,347 reads.
 
-Next, use [samtools](https://github.com/samtools/samtools) to convert the SAM file into a sorted BAM file.
+Lastly, use [samtools](https://github.com/samtools/samtools) to convert the SAM file into a sorted BAM file.
 
 ```bash
 # Convert SAM to BAM
