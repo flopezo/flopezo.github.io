@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mapping reads from RNA-seq data to mitochondrial genome &#8211; Federico Lopez-Osorio</title>
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdn.mathjax.org">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Test Post">
+    <meta name="robots" content="all">
+    <meta name="author" content="Federico Lopez-Osorio">
+    
+    <meta name="keywords" content="Test">
+    <link rel="canonical" href="http://www.federicolopez.org/test/2016/10/05/map_reads_to_mitogenome/">
+<!-- 
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Federico Lopez-Osorio" href="/feed.xml" />
+ -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201610181633" type="text/css">
+
+    <!-- Fonts -->
+    
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- MathJax -->
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mapping reads from RNA-seq data to mitochondrial genome">
+    <meta property="og:description" content="Phylogenetic and Evolution of Social Wasps">
+    <meta property="og:url" content="http://www.federicolopez.org/test/2016/10/05/map_reads_to_mitogenome/">
+    <meta property="og:site_name" content="Federico Lopez-Osorio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@flopezos" />
+    
+    <meta name="twitter:title" content="Mapping reads from RNA-seq data to mitochondrial genome" />
+    <meta name="twitter:description" content="Test Post" />
+    <meta name="twitter:url" content="http://www.federicolopez.org/test/2016/10/05/map_reads_to_mitogenome/" />
+
+    <!-- Icons -->
+
+    
+</head>
+
+<body class="site">
+  
+	
+
+  <div class="site-wrap">
+    <!-- <header class="site-header px2 px-responsive"> -->
+<header class="site-header px1">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.federicolopez.org" class="site-title">Federico Lopez-Osorio</a>
+      <nav class="site-nav">
+        
+    
+
+    
+
+    
+        <a href="/">About</a>
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        <a href="/publications/">Publications</a>
+    
+
+    
+
+
+    
+
+    
+        <a href="/articles/">Notebook</a>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+      </nav>
+<!--       <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-envelope" href="mailto:flopezo84@gmail.com"></a>
+    
+    
+      <a class="fa fa-github" href="https://github.com/flopezo"></a>
+    
+    
+    
+    
+      <a class="fa fa-twitter" href="https://twitter.com/flopezos"></a>
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+       -->
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="h2">Mapping reads from RNA-seq data to mitochondrial genome</h1>
+  </header>
+  <article class="post-content">
+  <p>These are my notes for mapping reads from RNA-seq data to a mitochondrial genome using <a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">Bowtie2</a>, since mitochondrial DNA, in general, lacks introns, and therefore a splice-aware read aligner would not be necessary; other tools such as <a href="https://github.com/lh3/bwa">BWA</a> or <a href="https://github.com/alexdobin/STAR">STAR</a> may be used for this task, too. General information about read alignment can be found in this <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8">review</a> or <a href="https://en.wikipedia.org/wiki/List_of_RNA-Seq_bioinformatics_tools#Alignment_Tools">here</a>. In this example, I will use the mitochondrial genome of the German wasp (<em>Vespula germanica</em>).</p>
+
+<p>First, download Bowtie2 and add the directory with the executables for Mac OS X/macOS to the system’s <a href="http://en.wikipedia.org/wiki/PATH_(variable)">PATH environment variable</a>:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># Download Bowtie2</span>
+curl -L http://downloads.sourceforge.net/project/bowtie-bio/bowtie2/2.2.9/bowtie2-2.2.9-macos-x86_64.zip <span class="se">\</span>
+	&gt; bowtie2-2.2.9-macos-x86_64.zip
+
+<span class="c"># Unpack file</span>
+unzip -a bowtie2-2.2.9-macos-x86_64.zip
+
+<span class="c"># Update PATH </span>
+<span class="c"># Here I use the text editor vi</span>
+<span class="c"># This assumes that the file .bash_profile exists in the home directory</span>
+<span class="c"># .bash_profile is a hidden file. Show hidden files in Finder by</span>
+<span class="c"># using the triple combination of ‘shift‘ + ‘command‘ + ‘.‘</span>
+<span class="c"># Change into home directory </span>
+<span class="nb">cd</span> ~
+<span class="c"># Use vi to open file</span>
+vi .bash_profile
+
+<span class="c"># Use vi's i command to begin inserting text</span>
+i
+
+<span class="c"># Insert path to Bowtie2 executables for Mac OS X/macOS</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/path/to/bowtie2-2.2.9
+
+<span class="c"># Press escape key</span>
+esc
+
+<span class="c"># Use vi's commands :wq to quit and save edits</span>
+:wq
+
+<span class="c"># Confirm that Bowtie2 is on the system's PATH</span>
+which bowtie2
+</code></pre>
+</div>
+
+<p>Second, download the mitochondrial genome of <em>Vespula germanica</em> as a FASTA file and index the genome. In this example, I employ efetch from the <a href="https://www.ncbi.nlm.nih.gov/books/NBK25500/">NCBI’s E-utilities</a> to download the FASTA file.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># Download FASTA file using the NCBI's efetch utility</span>
+curl <span class="s2">"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?</span><span class="se">\</span><span class="s2">
+db=nuccore&amp;id=KR703583&amp;rettype=fasta&amp;retmode=text"</span> &gt; vgermanica_mitogenome.fasta
+
+<span class="c"># Build genome index</span>
+<span class="c"># Usage: bowtie2-build file.fasta index_name</span>
+bowtie2-build vgermanica_mitogenome.fasta vgermanica_mitogenome
+</code></pre>
+</div>
+
+<p>Third, align reads. Reads in FASTQ format were previously trimmed using <a href="http://www.usadellab.org/cms/?page=trimmomatic">Trimmomatic</a>. Here I am using paired-end (2 x 100 bp) Illumina reads from a species of the genus <em>Dolichovespula</em>; no mitochondrial genome of <em>Dolichovespula</em> is currently available on GenBank.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># Map reads</span>
+<span class="c"># Usage: bowtie2 -x index_name -1 reads_1.fq -2 reads_2.fq -S outfile.sam</span>
+bowtie2 -x vgermanica_mitogenome -1 ../reads_1_paired.fq.qc.gz -2 ../reads_2_paired.fq.qc.gz -S reads_x_vgermanica.bowtie.sam -p 2 --very-sensitive
+</code></pre>
+</div>
+
+<p>The overall alignment rate was 0.34% or 484,347 reads.</p>
+
+<p>Next, use <a href="https://github.com/samtools/samtools">samtools</a> to convert the SAM file into a sorted BAM file.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># Convert SAM to BAM</span>
+<span class="c"># Usage: samtools view -bS file.sam &gt; file.bam</span>
+samtools view -bS reads_x_vgermanica.bowtie.sam &gt; reads_x_vgermanica.bowtie.bam
+
+<span class="c"># Convert BAM file to a sorted BAM file</span>
+<span class="c"># Usage: samtools sort file.bam -o file.sorted.bam</span>
+samtools sort reads_x_vgermanica.bowtie.bam -o reads_x_vgermanica.bowtie.sorted.bam
+
+<span class="c"># Optional: Get only mapped reads from BAM file</span>
+<span class="gp">$ </span>Usage: samtools view -b -F 4 file.sorted.bam &gt; file.sorted.mapped.bam
+samtools view -b -F 4 reads_x_vgermanica.bowtie.sorted.bam &gt; reads_x_vgermanica.bowtie.sorted.mapped.bam
+</code></pre>
+</div>
+
+  </article>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+<div class="measure">
+    <medium>
+      Federico Lopez-Osorio 2016
+      
+        <a class="social" href="mailto:flopezo84@gmail.com">
+          <i class="fa fa-envelope fa-lg"></i> Email
+        </a>
+      
+      
+        <a class="social" href="https://twitter.com/flopezos">
+          <i class="fa fa-twitter fa-lg"></i> Twitter
+        </a>
+      
+      
+        <a class="social" href="https://github.com/flopezo">
+          <i class="fa fa-github fa-lg"></i> GitHub
+        </a>
+      <br>
+      Pixyll theme available on <a href="https://github.com/johnotander/pixyll">GitHub</a><br>
+      Powered by <a href=http://jekyllrb.com target="_blank">Jekyll</a>
+    </medium>
+  </div>
+</footer>
+
+
+</body>
+</html>
