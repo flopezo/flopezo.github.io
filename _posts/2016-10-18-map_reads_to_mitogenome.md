@@ -8,7 +8,7 @@ categories: Test
 
 These are notes for aligning reads from RNA-seq data to a mitochondrial genome using [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml), since mitochondrial DNA, in general, lacks introns, and therefore a splice-aware read aligner would not be necessary; other tools such as [BWA](https://github.com/lh3/bwa) or [STAR](https://github.com/alexdobin/STAR) may be used for this task, too. General information about read alignment can be found in this [review](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8) or [here](https://en.wikipedia.org/wiki/List_of_RNA-Seq_bioinformatics_tools#Alignment_Tools). In this example, I will use the mitochondrial genome of the German wasp (*Vespula germanica*). 
 
-First, download Bowtie2 and add the directory with the executables for Mac OS X/macOS to the system's [PATH environment variable](http://en.wikipedia.org/wiki/PATH_(variable)):
+First, download `Bowtie2` and add the directory with the executables for Mac OS X/macOS to the system's [PATH environment variable](http://en.wikipedia.org/wiki/PATH_(variable)):
 
 ```bash
 # Download Bowtie2
@@ -44,7 +44,7 @@ esc
 which bowtie2
 ```
 
-Second, download the mitochondrial genome of *Vespula germanica* as a FASTA file and index the genome. In this example, I employ efetch from the [NCBI's E-utilities](https://www.ncbi.nlm.nih.gov/books/NBK25500/) to download the FASTA file.
+Second, download the mitochondrial genome of *Vespula germanica* as a FASTA file and index the genome. In this example, I employ `efetch` from the [NCBI's E-utilities](https://www.ncbi.nlm.nih.gov/books/NBK25500/) to download the FASTA file.
 
 ```bash
 # Download FASTA file using the NCBI's efetch utility
