@@ -18,7 +18,7 @@ import sys
 from Bio import SearchIO
 
 """
-Create a tab-delimited text file, parse one or more BLAST XML files, and 
+Create a tab-delimited text file, parse a BLAST XML file, and 
 print information from BLAST search output to text file
 
 Usage: python parse_blast_xml.py outfile.txt blastoutput.xml
