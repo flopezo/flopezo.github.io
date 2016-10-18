@@ -74,6 +74,7 @@ Next, use [samtools](https://github.com/samtools/samtools) to convert the SAM fi
 samtools view -bS reads_x_vgermanica.bowtie.sam > reads_x_vgermanica.bowtie.bam
 
 # Convert BAM file to a sorted BAM file
+# .bam.bai (the index of the sorted BAM file)
 # Usage: samtools sort file.bam -o file.sorted.bam
 samtools sort reads_x_vgermanica.bowtie.bam -o reads_x_vgermanica.bowtie.sorted.bam
 

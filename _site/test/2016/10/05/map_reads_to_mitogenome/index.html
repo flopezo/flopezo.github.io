@@ -19,7 +19,7 @@
  -->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?201610181633" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?201610181637" type="text/css">
 
     <!-- Fonts -->
     
@@ -219,6 +219,7 @@ bowtie2 -x vgermanica_mitogenome -1 ../reads_1_paired.fq.qc.gz -2 ../reads_2_pai
 samtools view -bS reads_x_vgermanica.bowtie.sam &gt; reads_x_vgermanica.bowtie.bam
 
 <span class="c"># Convert BAM file to a sorted BAM file</span>
+<span class="c"># .bam.bai (the index of the sorted BAM file)</span>
 <span class="c"># Usage: samtools sort file.bam -o file.sorted.bam</span>
 samtools sort reads_x_vgermanica.bowtie.bam -o reads_x_vgermanica.bowtie.sorted.bam
 
