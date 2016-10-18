@@ -1,7 +1,7 @@
 ---
 layout:     page
 title:      Mapping reads from RNA-seq data to mitochondrial genome 
-date:       2016-10-05
+date:       2016-10-18
 summary:    Test Post
 categories: Test
 ---
