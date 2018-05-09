@@ -4,7 +4,7 @@ email:       flopezo84@gmail.com
 author:      Federico Lopez-Osorio
 description: "Phylogenetic and Evolution of Social Wasps"
 baseurl:     ""
-url:         "http://www.federicolopez.org"
+url:         "https://flopezo.github.io"
 date_format: "%b %-d, %Y"
 
 # Google services
