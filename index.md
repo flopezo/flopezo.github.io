@@ -5,7 +5,7 @@ title: About
 tags: about
 ---
 
-I am a biologist interested in the evolution of social behavior. Specifically, I focus on social wasps in the subfamily Vespinae (yellowjackets and hornets) and study their evolutionary relationships and molecular evolution using specific gene sequences and large collections of expressed genes (transcriptomes). I am currently a Gerstner postdoctoral fellow at the American Museum of Natural History. 
+I am a biologist interested in the evolution of social behavior. Specifically, I focus on social wasps in the subfamily Vespinae (yellowjackets and hornets) and study their evolutionary relationships and patterns of molecular evolution using specific target genes, large collections of expressed genes (transcriptomes), and genomes. I am currently a Gerstner postdoctoral fellow at the American Museum of Natural History. 
 
 {:.center}
 
